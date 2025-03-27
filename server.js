@@ -19,8 +19,8 @@ const io = require("socket.io")(httpServer, {
   cors: {
     origin: [
       "http://localhost:3000",
-      "https://postit-quick-tweet.vercel.app/",
-      "postit-one-swart.vercel.app",
+      "https://postit-quick-tweet.vercel.app",
+      "https://postit-one-swart.vercel.app",
     ],
     methods: ["GET", "POST"],
     credentials: true,
@@ -48,8 +48,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://postit-quick-tweet.vercel.app/",
-      "postit-one-swart.vercel.app",
+      "https://postit-quick-tweet.vercel.app",
+      "https://postit-one-swart.vercel.app",
     ],
     credentials: true,
   })
