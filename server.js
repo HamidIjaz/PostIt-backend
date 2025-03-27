@@ -17,7 +17,13 @@ dotenv.config();
 const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: ["http://localhost:3000", "https://postit-quick-tweet.vercel.app/"],
+    origin: [
+      "http://localhost:3000",
+      "https://postit-quick-tweet.vercel.app/",
+      "postit-one-swart.vercel.app",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
@@ -40,7 +46,11 @@ app.use(express.json());
 app.use(cors());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://postit-quick-tweet.vercel.app/"],
+    origin: [
+      "http://localhost:3000",
+      "https://postit-quick-tweet.vercel.app/",
+      "postit-one-swart.vercel.app",
+    ],
     credentials: true,
   })
 );
