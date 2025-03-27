@@ -22,7 +22,7 @@ const corsOptions = {
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization"],
+  allowedHeaders: ["Content-Type", "Authorization", "x-access-token"],
 };
 
 mongoose
